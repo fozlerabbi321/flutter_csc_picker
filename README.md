@@ -25,15 +25,107 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+To use this Package, add flutter_csc_picker as a dependency in your pubspec.yaml.
 
 ```dart
-const like = 'sample';
+FlutterCSCPicker(
+              layout: Layout.vertical,
+              onCountryChanged: (value) {
+                setState(() {
+                  countryValue = value;
+                });
+              },
+              onStateChanged:(value) {
+                setState(() {
+                  stateValue = value;
+                });
+              },
+              onCityChanged:(value) {
+                setState(() {
+                  cityValue = value;
+                });
+              },
+
+            )
 ```
 
-## Additional information
+## Example
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+```dart
+import 'package:flutter/material.dart';
+import 'package:flutter_csc_picker/flutter_csc_picker.dart';
+
+
+
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return   MaterialApp(
+      title: 'Country State and City Picker',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
+    );
+  }
+}
+
+
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  String countryValue = "";
+  String stateValue = "";
+  String cityValue = "";
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Flutter CSC Picker"),),
+      body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        height: 600,
+        child: Column(
+          children: [
+            ///Adding Flutter CSC Picker Widget in app
+            FlutterCSCPicker(
+              layout: Layout.vertical,
+              onCountryChanged: (value) {
+                setState(() {
+                  countryValue = value;
+                });
+              },
+              onStateChanged:(value) {
+                setState(() {
+                  stateValue = value;
+                });
+              },
+              onCityChanged:(value) {
+                setState(() {
+                  cityValue = value;
+                });
+              },
+
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
