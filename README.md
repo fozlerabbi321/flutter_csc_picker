@@ -1,27 +1,13 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+## flutter_csc_picker
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+A flutter package for showing a selected country, states, and cities.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/1.png" width="240"/>
+<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/2.png" width="240"/>
+<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/3.png" width="240"/>
+<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/4.png" width="240"/>
+<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/5.png" width="240"/>
 
 ## Usage
 
@@ -54,9 +40,6 @@ FlutterCSCPicker(
 ```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_csc_picker/flutter_csc_picker.dart';
-
-
-
 
 void main() {
   runApp(const MyApp());
@@ -104,7 +87,14 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             ///Adding Flutter CSC Picker Widget in app
             FlutterCSCPicker(
+              /// County and state same line [OPTIONAL PARAMETER]
               layout: Layout.vertical,
+              /// Enable county title [OPTIONAL PARAMETER]
+              isCountyTitle: false,
+              /// Enable state title [OPTIONAL PARAMETER]
+              isStateTitle: false,
+              /// Enable county city [OPTIONAL PARAMETER]
+              isCityTitle: false,
               onCountryChanged: (value) {
                 setState(() {
                   countryValue = value;
