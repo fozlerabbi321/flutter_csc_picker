@@ -3,11 +3,11 @@
 
 A flutter package for showing a selected country, states, and cities.
 
-<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/1.png" width="240"/>
-<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/2.png" width="240"/>
-<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/3.png" width="240"/>
-<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/4.png" width="240"/>
-<img src="https://raw.githubusercontent.com/prof22/country_state_city_picker/main/screenshot/5.png" width="240"/>
+<img src="https://github.com/fozlerabbi321/flutter_csc_picker/main/screenshot/1.png" width="240"/>
+<img src="https://github.com/fozlerabbi321/flutter_csc_picker/main/screenshot/2.png" width="240"/>
+<img src="https://github.com/fozlerabbi321/flutter_csc_picker/main/screenshot/3.png" width="240"/>
+<img src="https://github.com/fozlerabbi321/flutter_csc_picker/main/screenshot/4.png" width="240"/>
+<img src="https://github.com/fozlerabbi321/flutter_csc_picker/main/screenshot/5.png" width="240"/>
 
 ## Usage
 
